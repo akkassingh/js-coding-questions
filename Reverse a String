@@ -1,0 +1,36 @@
+// Method 1.   Using Inbuilt functions
+
+function reverseString(str) {
+  return str.split("").reverse().join("");
+  }
+reverseString('hello')
+
+/// Method 2.   Using For Loop
+
+function reverseString(str) {
+    var newString = "";
+    for (var i = str.length - 1; i >= 0; i--) {
+        newString += str[i];
+    }
+    return newString;
+}
+reverseString('hello');
+
+
+
+/// Method 3.   Using Recursion
+
+function reverseString(str) {
+  if (str === "")
+    return "";
+  else
+    return reverseString(str.substr(1)) + str.charAt(0);
+}
+reverseString("hello");
+
+/// Method 4.   Using Ternary Operator
+
+function reverseString(str) {
+  return (str === '') ? '' : reverseString(str.substr(1)) + str.charAt(0);
+}
+reverseString("hello");
